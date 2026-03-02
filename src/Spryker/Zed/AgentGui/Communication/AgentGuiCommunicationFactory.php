@@ -17,25 +17,16 @@ use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
 
 class AgentGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\AgentGui\Communication\FormExpander\UserAgentFormExpanderInterface
-     */
     public function createUserAgentFormExpander(): UserAgentFormExpanderInterface
     {
         return new UserAgentFormExpander();
     }
 
-    /**
-     * @return \Spryker\Zed\AgentGui\Communication\TableConfigExpander\UserAgentTableConfigExpanderInterface
-     */
     public function createUserAgentTableConfigExpander(): UserAgentTableConfigExpanderInterface
     {
         return new UserAgentTableConfigExpander();
     }
 
-    /**
-     * @return \Spryker\Zed\AgentGui\Communication\TableDataExpander\UserAgentTableDataExpanderInterface
-     */
     public function createUserAgentTableDataExpander(): UserAgentTableDataExpanderInterface
     {
         return new UserAgentTableDataExpander();

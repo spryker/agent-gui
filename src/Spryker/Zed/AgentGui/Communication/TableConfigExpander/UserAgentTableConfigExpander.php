@@ -12,11 +12,6 @@ use Spryker\Zed\Gui\Communication\Table\TableConfiguration;
 
 class UserAgentTableConfigExpander implements UserAgentTableConfigExpanderInterface
 {
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     public function expandConfig(TableConfiguration $config): TableConfiguration
     {
         $this->addAgentHeader($config);
@@ -25,11 +20,6 @@ class UserAgentTableConfigExpander implements UserAgentTableConfigExpanderInterf
         return $config;
     }
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return void
-     */
     protected function addAgentHeader(TableConfiguration $config): void
     {
         $header = $this->insertAfterHeader($config->getHeader(), SpyUserTableMap::COL_STATUS, [
@@ -39,11 +29,6 @@ class UserAgentTableConfigExpander implements UserAgentTableConfigExpanderInterf
         $config->setHeader($header);
     }
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return void
-     */
     protected function setRawAgentColumn(TableConfiguration $config): void
     {
         $config->setRawColumns(array_merge($config->getRawColumns(), [
@@ -51,13 +36,6 @@ class UserAgentTableConfigExpander implements UserAgentTableConfigExpanderInterf
         ]));
     }
 
-    /**
-     * @param array $array
-     * @param string $key
-     * @param array $new
-     *
-     * @return array
-     */
     protected function insertAfterHeader(array $array, string $key, array $new): array
     {
         $keys = array_keys($array);

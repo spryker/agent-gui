@@ -27,21 +27,11 @@ class UserAgentFormExpander implements UserAgentFormExpanderInterface
      */
     protected const FIELD_IS_AGENT_TEMPLATE_PATH = '@Agent/_partials/user-form-is-agent-field.twig';
 
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     *
-     * @return void
-     */
     public function buildForm(FormBuilderInterface $builder): void
     {
         $this->addIsAgentField($builder);
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     *
-     * @return void
-     */
     protected function addIsAgentField(FormBuilderInterface $builder): void
     {
         $builder->add(static::FIELD_IS_AGENT, CheckboxType::class, [

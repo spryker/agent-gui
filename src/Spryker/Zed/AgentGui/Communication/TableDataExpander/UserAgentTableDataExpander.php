@@ -11,11 +11,6 @@ use Orm\Zed\User\Persistence\Map\SpyUserTableMap;
 
 class UserAgentTableDataExpander implements UserAgentTableDataExpanderInterface
 {
-    /**
-     * @param array $item
-     *
-     * @return array
-     */
     public function expandData(array $item): array
     {
         return [
@@ -23,11 +18,6 @@ class UserAgentTableDataExpander implements UserAgentTableDataExpanderInterface
         ];
     }
 
-    /**
-     * @param bool|null $isAgent
-     *
-     * @return string
-     */
     protected function createIsAgentLabel(?bool $isAgent): string
     {
         return $isAgent ? '<span class="label label-success" title="Agent">Agent</span>' : '';

@@ -9,10 +9,5 @@ namespace Spryker\Zed\AgentGui\Communication\TableDataExpander;
 
 interface UserAgentTableDataExpanderInterface
 {
-    /**
-     * @param array $item
-     *
-     * @return array
-     */
     public function expandData(array $item): array;
 }
